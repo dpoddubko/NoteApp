@@ -16,7 +16,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "com.example.noteapp.HiltTestRunner"
+        testInstrumentationRunner = "com.dpoddubko.noteapp.HiltTestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -70,6 +70,7 @@ dependencies {
     // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.core.ktx)
     ksp(libs.androidx.room.compiler)
 
     // Hilt

@@ -12,7 +12,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.dpoddubko.noteapp.domain.model.Note
+import com.dpoddubko.noteapp.presentation.ui.MainScreenConstants.NO_NOTES_AVAILABLE_TEXT
+import com.dpoddubko.noteapp.presentation.ui.MainScreenConstants.YOUR_NOTES_TEXT
 import com.dpoddubko.noteapp.presentation.viewmodel.NoteViewModel
+
+object MainScreenConstants {
+    const val YOUR_NOTES_TEXT = "Your Notes"
+    const val NO_NOTES_AVAILABLE_TEXT = "No notes available."
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -60,11 +67,15 @@ fun MainScreen(
                 modifier = Modifier.fillMaxWidth()
             )
             Spacer(modifier = Modifier.height(16.dp))
-            Text("Your Notes", style = MaterialTheme.typography.headlineMedium)
+            Text(YOUR_NOTES_TEXT, style = MaterialTheme.typography.headlineMedium)
             Spacer(modifier = Modifier.height(8.dp))
-            NoteList(notes = uiState.notes, onDelete = { note ->
-                viewModel.deleteNote(note)
-            })
+            if (uiState.notes.isEmpty()) {
+                Text(NO_NOTES_AVAILABLE_TEXT, style = MaterialTheme.typography.bodyMedium)
+            } else {
+                NoteList(notes = uiState.notes, onDelete = { note ->
+                    viewModel.deleteNote(note)
+                })
+            }
         }
     }
 }
@@ -103,3 +114,4 @@ fun NoteItem(note: Note, onDelete: (Note) -> Unit) {
         }
     }
 }
+
