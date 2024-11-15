@@ -1,10 +1,9 @@
-package com.dpoddubko.noteapp
+package com.dpoddubko.noteapp.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.dpoddubko.noteapp.presentation.ui.MainScreen
-import com.dpoddubko.noteapp.ui.theme.NoteAppTheme
+import com.dpoddubko.noteapp.presentation.ui.theme.NoteAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

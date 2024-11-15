@@ -1,4 +1,4 @@
-package com.dpoddubko.noteapp.ui.theme
+package com.dpoddubko.noteapp.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

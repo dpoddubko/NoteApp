@@ -8,6 +8,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -28,8 +29,8 @@ fun MainScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
-    var title by remember { mutableStateOf("") }
-    var content by remember { mutableStateOf("") }
+    var title by rememberSaveable  { mutableStateOf("") }
+    var content by rememberSaveable  { mutableStateOf("") }
 
     Scaffold(
         topBar = {
