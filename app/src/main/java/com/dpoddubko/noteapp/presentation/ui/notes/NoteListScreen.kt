@@ -60,11 +60,10 @@ fun NoteListScreen(
                 Text("Нет доступных заметок.")
             }
         } else {
-// Ограничиваем размер списка
             LazyColumn(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(400.dp) // Фиксированная высота списка, измените по необходимости
+                    .fillMaxSize()
                     .padding(paddingValues)
             ) {
                 items(uiState.notes) { note ->
