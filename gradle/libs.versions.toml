@@ -17,6 +17,9 @@ lifecycle = "2.8.7"
 mockk = "1.13.4"
 turbine = "0.12.1"
 coreKtxVersion = "1.6.1"
+navigation = "2.8.4"
+datastore = "1.1.1"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -50,6 +53,11 @@ androidx-room-compiler = { group = "androidx.room", name = "room-compiler", vers
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
+datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+datastore-core = { group = "androidx.datastore", name = "datastore", version.ref = "datastore" }
+
 
 # Hilt dependencies
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }

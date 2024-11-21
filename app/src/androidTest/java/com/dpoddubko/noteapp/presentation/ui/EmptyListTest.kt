@@ -2,8 +2,8 @@ package com.dpoddubko.noteapp.presentation.ui
 
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import com.dpoddubko.noteapp.presentation.ui.MainScreenConstants.NO_NOTES_AVAILABLE_TEXT
-import com.dpoddubko.noteapp.presentation.ui.MainScreenConstants.YOUR_NOTES_TEXT
+import com.dpoddubko.noteapp.presentation.ui.main.MainScreenConstants.NO_NOTES_AVAILABLE_TEXT
+import com.dpoddubko.noteapp.presentation.ui.main.MainScreenConstants.YOUR_NOTES_TEXT
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import org.junit.Before

@@ -4,6 +4,7 @@ import com.dpoddubko.noteapp.domain.repository.NoteRepository
 import com.dpoddubko.noteapp.domain.usecase.AddNoteUseCase
 import com.dpoddubko.noteapp.domain.usecase.DeleteNoteUseCase
 import com.dpoddubko.noteapp.domain.usecase.GetAllNotesUseCase
+import com.dpoddubko.noteapp.domain.usecase.GetNoteByIdUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -35,5 +36,11 @@ object TestAppModule {
     @Singleton
     fun provideDeleteNoteUseCase(repository: NoteRepository): DeleteNoteUseCase {
         return DeleteNoteUseCase(repository)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGetNoteByIdUseCase(repository: NoteRepository): GetNoteByIdUseCase {
+        return GetNoteByIdUseCase(repository)
     }
 }

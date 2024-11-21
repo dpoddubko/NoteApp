@@ -78,6 +78,13 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     ksp(libs.hilt.compiler)
 
+    // Navigation
+    implementation(libs.navigation.compose)
+
+    // Datastore
+    implementation(libs.datastore.preferences)
+    implementation(libs.datastore.core)
+
     // Coroutines
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)

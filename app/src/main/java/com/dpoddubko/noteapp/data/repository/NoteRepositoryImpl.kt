@@ -29,4 +29,8 @@ class NoteRepositoryImpl @Inject constructor(
     override suspend fun clearNotes() {
         dao.clearNotes()
     }
+
+    override suspend fun updateNote(note: Note) = dao.updateNote(note.toEntity())
+
+    override suspend fun getNoteById(id: Int): Note? = dao.getNoteById(id)
 }

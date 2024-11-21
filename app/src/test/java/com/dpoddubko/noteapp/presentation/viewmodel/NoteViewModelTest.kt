@@ -5,6 +5,7 @@ import com.dpoddubko.noteapp.domain.model.Note
 import com.dpoddubko.noteapp.domain.usecase.AddNoteUseCase
 import com.dpoddubko.noteapp.domain.usecase.DeleteNoteUseCase
 import com.dpoddubko.noteapp.domain.usecase.GetAllNotesUseCase
+import com.dpoddubko.noteapp.presentation.ui.main.NoteViewModel
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers

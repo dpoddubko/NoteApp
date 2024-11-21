@@ -3,6 +3,7 @@ package com.dpoddubko.noteapp.presentation.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import com.dpoddubko.noteapp.presentation.navigation.NavGraph
 import com.dpoddubko.noteapp.presentation.ui.theme.NoteAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -12,7 +13,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             NoteAppTheme {
-                MainScreen()
+                NavGraph()
             }
         }
     }
